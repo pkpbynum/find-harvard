@@ -1,0 +1,23 @@
+{% extends "basenav.html" %}
+
+{% block title %}
+    HMeet
+{% endblock %}
+
+{% block main %}
+    <div id="map"></div>
+    <div id="new_event_popup">
+        To post your own event, click a location on the map and press "create event".
+    </div>
+{% endblock %}
+
+{% block includes %}
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMKmbWQ9maYVKssMW22Ac6XB32eWBehrk&callback=loadMap">
+    </script>
+    <script>
+        $(document).ready(function() {
+           loadEvents({{ events|safe }});
+        });
+    </script>
+{% endblock %}

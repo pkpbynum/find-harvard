@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1 {
+  font-size: 3em;
+  font-weight: 700; }
+
+h2 {
+  font-size: 2em;
+  font-weight: 700; }
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 2em; }
+
+  h2 {
+    font-size: 1.625em; } }
+html, body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans";
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+#map {
+  height: 100%;
+  width: 100%; }
+
+.login-mobile-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row; }
+
+.page-item {
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+@media(max-width: 648px) {
+  .login-mobile-wrap {
+    flex-direction: column; }
+
+  .page-item {
+    height: 50%;
+    width: 100%; } }
+#new_event_popup {
+  position: fixed;
+  margin: 10px;
+  bottom: 0;
+  font-weight: 300;
+  right: -615px;
+  background: white;
+  color: #a6a6a6;
+  width: 600px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: right, 1s; }
+
+#createeventform {
+  position: relative;
+  top: 70px;
+  padding: 10px; }
+
+.IFcontent {
+  width: 300px; }
+
+.login-form {
+  max-width: 400px; }
+
+nav {
+  position: fixed;
+  border-radius: 2px;
+  background: white;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+  height: 50px;
+  width: 300px;
+  margin: 10px;
+  overflow: hidden;
+  transition: height 0.75s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  nav #nav-list {
+    width: 300px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    flex-direction: row; }
+    nav #nav-list li, nav #nav-list li > a {
+      display: block;
+      flex: 1 0 auto;
+      line-height: 50px;
+      text-align: center;
+      color: #a6a6a6;
+      transition: color, background 0.2s ease;
+      font-weight: 300; }
+      nav #nav-list li:hover, nav #nav-list li > a:hover {
+        color: white;
+        background: #e6e6e6;
+        text-decoration: none; }
+  nav #nav-toggle {
+    width: 35px;
+    height: 38px;
+    margin: 6px 10px;
+    display: none;
+    cursor: pointer; }
+    nav #nav-toggle > div {
+      background: #a6a6a6;
+      margin: 8px 0;
+      width: 35px;
+      height: 2px; }
+
+.expand-nav {
+  height: calc(100% - 20px); }
+
+.show {
+  opacity: 1 !important;
+  pointer-events: auto !important; }
+
+#create_event {
+  cursor: pointer; }
+
+@media(max-width: 520px) {
+  nav {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% - 20px); }
+    nav #nav-list {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 300px;
+      width: 110px;
+      transition: opacity 0.5s ease; }
+      nav #nav-list li {
+        flex: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease; }
+    nav #nav-toggle {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0; } }
+
+/*# sourceMappingURL=base.css.map */

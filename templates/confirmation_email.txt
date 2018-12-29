@@ -1,0 +1,4 @@
+Hello! Thanks for you using HMeet!
+
+Use the following link to confirm your email address:
+{{ link }}

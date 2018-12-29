@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    HMeet | Log In
+{% endblock %}
+
+{% block main %}
+<div class="login-mobile-wrap">
+    <div class="page-item">
+        <h1 style="text-align:center">Welcome to HMeet</h1><br>
+        <h2 style="text-align:center">Log in to see what's happening on campus</h2>
+    </div>
+    <div class="page-item">
+        <form action="/login" method="post" class="login-form">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="email" placeholder="Harvard Email" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="form-group">
+                <button style="margin: 0 92px 10px 92px" class="btn btn-primary" type="submit">Log In</button>
+                <p>Don't have an account? <a href="/register">Make one!</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

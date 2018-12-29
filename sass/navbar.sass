@@ -1,0 +1,84 @@
+nav
+    position: fixed
+    border-radius: 2px
+    background: white
+    right: 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    z-index: 1
+    height: 50px
+    width: 300px
+    margin: 10px
+    overflow: hidden
+    transition: height 0.75s ease
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+    #nav-list
+        width: 300px
+        height: 50px
+        list-style: none
+        display: flex
+        flex-direction: row
+
+        li, li>a
+            display: block
+            flex: 1 0 auto
+            line-height: 50px
+            text-align: center
+            color: rgb(166, 166, 166)
+            transition: color, background .2s ease
+            font-weight: 300
+
+            &:hover
+                color: white
+                background: rgb(230, 230, 230)
+                text-decoration: none
+
+    #nav-toggle
+        width: 35px
+        height: 38px
+        margin: 6px 10px
+        display: none
+        cursor: pointer
+
+        &>div
+            background: rgb(166, 166, 166)
+            margin: 8px 0
+            width: 35px
+            height: 2px
+
+.expand-nav
+    height: calc(100% - 20px)
+
+.show
+    opacity: 1 !important
+    pointer-events: auto !important
+
+#create_event
+    cursor: pointer
+@media(max-width: 520px)
+    nav
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        width: calc(100% - 20px)
+
+        #nav-list
+            flex-direction: column
+            justify-content: space-between
+            height: 300px
+            width: 110px
+            transition: opacity 0.5s ease
+
+            li
+                flex: none
+                opacity: 0
+                pointer-events: none
+                transition: opacity 0.5s ease
+
+        #nav-toggle
+            display: block
+            position: absolute
+            top: 0
+            right: 0
